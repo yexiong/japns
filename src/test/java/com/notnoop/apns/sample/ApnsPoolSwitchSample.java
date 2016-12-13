@@ -43,11 +43,6 @@ public class ApnsPoolSwitchSample {
                         .sound("default") // 有声or有震动
                         .alertBody("SUCC " + i + ":" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())).build());
                 System.out.println(i + " duration" + (System.currentTimeMillis() - start));
-
-                apns.push("e19e90fce8af84196f0885b84739b1985441040326fb6073491bb04509b11111", APNS.newPayload()// error
-                        .sound("default") // 有声or有震动
-                        .alertBody("FAIL2 " + i + ":" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())).build());
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
